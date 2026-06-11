@@ -6,6 +6,7 @@ export interface CorpusText {
   id: number
   name: string
   text: string
+  is_updated: boolean
   tokens: string
   created_at?: string | null
   updated_at?: string | null

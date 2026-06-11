@@ -22,8 +22,8 @@ const pagination = ref<PaginationMeta>({
 const columns: Column<CorpusText>[] = [
   { key: 'id', label: 'ID', sortable: true, width: '80px' },
   { key: 'name', label: 'Nev', sortable: true },
+  { key: 'is_updated', label: 'Frissitve', sortable: true, width: '120px' },
   { key: 'text', label: 'Szoveg', sortable: false },
-  { key: 'tokens', label: 'Tokenek', sortable: false, width: '240px' },
 ]
 
 const fetchCorpusTexts = async (params: {
@@ -84,8 +84,8 @@ onMounted(() => {
         <span class="block max-w-xl truncate" :title="row.text">{{ row.text }}</span>
       </template>
 
-      <template #cell-tokens="{ row }">
-        <span class="block max-w-xs truncate text-xs" :title="row.tokens">{{ row.tokens }}</span>
+      <template #cell-is_updated="{ row }">
+        <span>{{ row.is_updated ? 'Igen' : 'Nem' }}</span>
       </template>
 
       <template #row-actions="{ row }">
