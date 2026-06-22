@@ -20,7 +20,6 @@ const pagination = ref<PaginationMeta>({
 })
 
 const columns: Column<Keyword>[] = [
-  { key: 'id', label: 'ID', sortable: true, width: '80px' },
   { key: 'name', label: 'Kulcsszo', sortable: true },
   { key: 'alias_keyword', label: 'Alias', sortable: false },
   { key: 'is_stop_word', label: 'Stop szo', sortable: true, width: '120px' },

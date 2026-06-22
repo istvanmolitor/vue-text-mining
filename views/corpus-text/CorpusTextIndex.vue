@@ -20,7 +20,6 @@ const pagination = ref<PaginationMeta>({
 })
 
 const columns: Column<CorpusText>[] = [
-  { key: 'id', label: 'ID', sortable: true, width: '80px' },
   { key: 'name', label: 'Nev', sortable: true },
   { key: 'is_updated', label: 'Frissitve', sortable: true, width: '120px' },
   { key: 'text', label: 'Szoveg', sortable: false },
