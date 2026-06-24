@@ -7,7 +7,7 @@ import CardFooter from '@admin/components/ui/CardFooter.vue'
 import CardHeader from '@admin/components/ui/CardHeader.vue'
 import CardTitle from '@admin/components/ui/CardTitle.vue'
 import Checkbox from '@admin/components/ui/Checkbox.vue'
-import Input from '@admin/components/ui/Input.vue'
+import InputField from '@admin/components/ui/InputField.vue'
 import Label from '@admin/components/ui/Label.vue'
 import Select from '@admin/components/ui/Select.vue'
 import { onMounted, reactive, ref } from 'vue'
@@ -93,11 +93,7 @@ onMounted(() => {
         <CardDescription>Add meg az uj keyword adatait.</CardDescription>
       </CardHeader>
       <CardContent class="space-y-4">
-        <div class="space-y-2">
-          <Label for="name">Kulcsszo</Label>
-          <Input id="name" v-model="form.name" placeholder="pelda" />
-          <InputError :message="errors.name" />
-        </div>
+        <InputField id="name" label="Kulcsszo" v-model="form.name" placeholder="pelda" :errors="errors.name" />
 
         <div class="space-y-2">
           <Label for="alias_keyword_id">Alias keyword</Label>

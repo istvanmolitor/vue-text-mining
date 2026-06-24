@@ -6,7 +6,7 @@ import CardDescription from '@admin/components/ui/CardDescription.vue'
 import CardFooter from '@admin/components/ui/CardFooter.vue'
 import CardHeader from '@admin/components/ui/CardHeader.vue'
 import CardTitle from '@admin/components/ui/CardTitle.vue'
-import Input from '@admin/components/ui/Input.vue'
+import InputField from '@admin/components/ui/InputField.vue'
 import Label from '@admin/components/ui/Label.vue'
 import Textarea from '@admin/components/ui/Textarea.vue'
 import { onMounted, reactive, ref } from 'vue'
@@ -83,11 +83,7 @@ onMounted(() => {
         <CardDescription>Modositsd a corpus text adatait.</CardDescription>
       </CardHeader>
       <CardContent class="space-y-4">
-        <div class="space-y-2">
-          <Label for="name">Nev</Label>
-          <Input id="name" v-model="form.name" placeholder="Pelda corpus" />
-          <InputError :message="errors.name" />
-        </div>
+        <InputField id="name" label="Nev" v-model="form.name" placeholder="Pelda corpus" :errors="errors.name" />
 
         <div class="space-y-2">
           <Label for="text">Szoveg</Label>
