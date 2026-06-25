@@ -19,24 +19,6 @@ const textMiningRoutes: RouteRecordRaw[] = [
     component: () => import('../views/corpus-text/CorpusTextEdit.vue'),
     meta: { requiresAuth: true }
   },
-  {
-    path: '/admin/text-mining/keyword',
-    name: 'text-mining-keywords',
-    component: () => import('../views/keyword/KeywordIndex.vue'),
-    meta: { requiresAuth: true }
-  },
-  {
-    path: '/admin/text-mining/keyword/create',
-    name: 'text-mining-keyword-create',
-    component: () => import('../views/keyword/KeywordCreate.vue'),
-    meta: { requiresAuth: true }
-  },
-  {
-    path: '/admin/text-mining/keyword/:id/edit',
-    name: 'text-mining-keyword-edit',
-    component: () => import('../views/keyword/KeywordEdit.vue'),
-    meta: { requiresAuth: true }
-  },
 ]
 
 export default textMiningRoutes

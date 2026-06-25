@@ -1,5 +1,5 @@
 import { MenuBuilder, type MenuItemConfig } from '@menu/index'
-import { ScanText, FileText, KeyRound } from 'lucide-vue-next'
+import { ScanText, FileText } from 'lucide-vue-next'
 
 export class TextMiningMenuBuilder extends MenuBuilder {
   build(menu: MenuItemConfig, menuName: string): MenuItemConfig {
@@ -26,14 +26,6 @@ export class TextMiningMenuBuilder extends MenuBuilder {
           order: 10,
           permission: 'text-mining'
         },
-        {
-          id: 'text-mining-keywords',
-          title: 'Keyword',
-          path: '/admin/text-mining/keyword',
-          icon: KeyRound,
-          order: 20,
-          permission: 'text-mining'
-        }
       ]
     }
 
