@@ -19,11 +19,7 @@ const pagination = ref<PaginationMeta>({
   total: 0
 })
 
-const columns: Column<CorpusText>[] = [
-  { key: 'name', label: 'Nev', sortable: true },
-  { key: 'is_updated', label: 'Frissitve', sortable: true, width: '120px' },
-  { key: 'text', label: 'Szoveg', sortable: false },
-]
+const columns = ref<Column[]>([])
 
 const fetchCorpusTexts = async (params: {
   search?: string
@@ -36,6 +32,7 @@ const fetchCorpusTexts = async (params: {
     const response = await corpusTextService.getAll(params)
     corpusTexts.value = response.data.data
     pagination.value = response.data.meta
+    columns.value = (response.data.columns ?? []) as Column[]
   } catch (error) {
     console.error('Hiba a corpus text elemek betoltesekor:', error)
   } finally {
